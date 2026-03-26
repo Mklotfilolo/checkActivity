@@ -1,0 +1,240 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding: 0;
+    
+}
+body{
+  overflow-y: auto;   /* or visible */
+  margin: 0;
+  padding: 0;
+    direction: ltr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("Unitiled Purple.png");
+    background-position: center center;
+    backdrop-filter: blur(10px);
+    background-attachment: scroll;
+}
+/* header and nav bar */
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.navBar{
+    min-width: 180px;
+    max-width: 100%;
+    padding: 20px;
+    margin:10px;
+    gap:9px;
+    background-image: linear-gradient(60deg,rgba(11, 10, 11, 0.5),rgba(88, 65, 84, 0.899));
+    border-radius: 15px;
+    transition:display 0.5s;
+    border-left: 8px inset rgb(129, 10, 198);
+    border-right: 8px inset rgb(129, 10, 198);
+    box-shadow: 2px 4px 12px rgb(129, 10, 198);
+
+}
+.topLinks{
+    padding: 10px;
+    outline: none;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color:rgb(235, 240, 246);
+    border-radius: 9px;
+    background:transparent;
+    transition: color  0.4s ;
+    justify-items: center;
+}
+.topLinks:hover{
+    background:linear-gradient(60deg,rgb(136, 177, 239),rgba(243, 102, 219, 0.899)) ;
+    color:rgb(129, 10, 198);
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 10px;
+}
+.topLinks:active{
+    transform:scale(0.87);
+    box-shadow: 2px -4px 12px inset rgb(129, 10, 198);
+
+}
+.topButton{
+    background:linear-gradient(60deg,rgb(136, 177, 239),rgba(243, 102, 219, 0.899)) ;
+    color:rgb(129, 10, 198);
+    border:none;
+    font-size: 1.3rem;
+    margin: 10px;
+    padding:6px;
+    border-radius: 10px;
+    transform:scale(1);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 2px 4px 12px rgb(129, 10, 198);
+}
+.close{
+    margin: 0px 10px;
+}
+.topButton:hover{
+    transform:scale(1.09);
+}
+.topButton:active{
+    transform:scale(0.87);
+    box-shadow: 2px -4px 12px inset rgb(129, 10, 198);
+}
+.hideTooleBar{
+    display:none;
+    transition:display 0.5s;
+}
+
+
+/*info card*/
+.infoCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width:350px;
+    max-width: 100%;
+    margin:20px;
+    padding: 10px 40px 10px 40px;
+    background-image: linear-gradient(60deg,rgba(122, 181, 201, 0.734),rgba(64, 193, 236, 0.662));
+    backdrop-filter: blure(20px) grayscale(200%);
+    font-size: 1.3rem;
+    font-weight: bold;
+    color:rgb(216, 231, 254);
+    border-radius: 20px;
+    gap:10px;
+}
+/* fill input card */
+
+.hello{
+    display:flex;
+    flex-direction: column;
+    padding: 50px;
+    gap:10px;
+    color:rgb(33, 38, 39);
+    border-radius: 20px;
+    height:auto;
+    background:linear-gradient(60deg,rgba(36, 154, 237, 0.646),rgba(224, 21, 112, 0.723));
+    backdrop-filter: grayscale(100%);
+    margin: 20px;
+    border-top: 8px inset rgb(129, 10, 198);
+    border-bottom: 8px inset rgb(129, 10, 198);
+    box-shadow: 2px 4px 12px rgb(129, 10, 198);
+    animation: pupo ease-out 1s ;
+
+}
+/* inside the div */
+.hello div{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.hello .name,
+.hello .age{
+    position: relative;
+}
+.hello div input {
+    min-width:140px ;
+    max-width: 100%;
+    height: 39px;
+    background:rgba(129, 16, 195, 0.635);
+    border:none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size:1.3rem;
+    box-shadow: 0px 0px 0px transparent;
+    transition:box-shadow 0.5s;
+    padding-left: 5PX;
+}
+.hello div input:hover{
+    box-shadow: 2px 4px 12px rgb(129, 10, 198);
+}
+.hello div input:focus{
+    outline:none;
+    box-shadow: 2px 4px 12px rgb(129, 10, 198);
+}
+
+.hello div select {
+    min-width:140px ;
+    max-width: 100%;
+    height: 39px;
+    background:rgba(129, 16, 195, 0.635);
+    border:none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px transparent;
+    transition:box-shadow 0.5s;
+}
+.hello div select:hover{
+    box-shadow: 2px 4px 12px rgb(129, 10, 198);
+}
+.hello div select:focus{
+    outline:none;
+    box-shadow: 2px 4px 12px rgb(129, 10, 198);
+}
+/*label effect*/
+.hello div label {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 5px auto;
+    
+}
+.hello .name label ,
+.hello .age label{
+    position: absolute;
+    top:10px;
+    left:16px;
+    color:rgb(47, 47, 47);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.hello .name input:focus+label{
+    top:-19px;
+}
+.hello input:focus{
+    border-bottom: 1px inset rgb(216, 231, 254);
+}
+
+.hello .age input:focus+label{
+    top:-19px;
+}
+
+/* the las button*/
+.lastButton{
+    background:linear-gradient(60deg,rgb(136, 177, 239),rgba(243, 102, 219, 0.899)) ;
+    color:rgb(129, 10, 198);
+    border:none;
+    font-size: 1.3rem;
+    margin: 10px;
+    padding:6px;
+    border-radius: 10px;
+    transform:scale(1);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 2px 4px 12px rgb(129, 10, 198);
+}
+.lastButton:hover{
+    transform:scale(1.09);
+}
+.lastButton:active{
+    transform:scale(0.87);
+    box-shadow: 2px -4px 12px inset rgb(129, 10, 198);
+}
+
+/* user card*/
+
+.AllCards{
+    animation: pupo ease-out 1s ;
+}
+
+@keyframes pupo {
+    from{
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1; 
+    }
+}

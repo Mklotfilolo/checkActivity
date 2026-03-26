@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="En">
+<head>
+  <meta charset='UTF-8'>
+  <title>The  mm project</title>
+  <link rel="stylesheet" href="mm.css"/>
+</head>
+<body>
+  <header class="header">
+    
+    <nav class="navBar">
+      <button class="topButton close"> ^ </button>
+      <a href="" class="topLinks">Home</a>
+      <a href="" class="topLinks">contact</a>
+      <a href="" class="topLinks">Acount</a>
+      <a href="" class="topLinks">profile</a>
+      <a href="" class="topLinks">cars </a>
+      <a href="" class="topLinks">more</a>
+    </nav>
+    <button class="topButton slide">Slide bar</button>
+  </header>
+  <div class="infoCard">
+    <p class="nameEl">name</p>
+    <p class="ageEl">Age</p>
+    <p class="birthDayEl">birth</p>
+    <p class="majorEl">major</p>
+  </div>
+  <div class="hello">
+    <h2>infomation</h2>
+    <div class="name">
+      <input type="text" id="texU" required> 
+      <label for="texU">Full name :</label>
+    </div>
+    <div class="age">
+      <input type="number" max="80" min="5" id="ageU">
+      <label for="ageU">Age :</label>
+    </div>
+    <div class="birth">
+      <label for="birthU ">Birth day :</label>
+        <input type="date"id="birthU">
+       
+    </div>
+    <div class="major">
+      <label for="majorU"> major :</label>
+        <select name="major" id="majorU">
+          <option value="App programer" selected> applaction program</option>
+          <option value="web devloper"> web devloper</option>
+          <option value="triner">Triner</option>
+          <option value="gamer"> Gamer</option>
+        </select>
+    </div>
+  </div>
+  <button onclick="user()" class="lastButton"><span>Click me</span></button>
+  <section class="cardUsers">
+  </section>
+  <script src="mm.js"></script>
+</body>
+</html>
